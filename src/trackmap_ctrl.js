@@ -357,8 +357,8 @@ export class TrackMapCtrl extends MetricsPanelCtrl {
     // Asumption is that there are an equal number of properly matched timestamps
     // TODO: proper joining by timestamp?
     this.coords.length = 0;
-    const lats = data[0].datapoints;
-    const lons = data[1].datapoints;
+    const lats = data[1].datapoints;
+    const lons = data[0].datapoints;
     for (let i = 0; i < lats.length; i++) {
       if (lats[i][0] == null || lons[i][0] == null ||
           (lats[i][0] == 0 && lons[i][0] == 0) ||
